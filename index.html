@@ -22,7 +22,7 @@ async function test() {
   el.innerText = 'Проверяю...';
 
   try {
-    const res = await fetch('http://194.32.248.245:3000/health');
+    const res = await fetch('/api/health');
     const data = await res.json();
     el.innerText = JSON.stringify(data, null, 2);
   } catch (e) {
